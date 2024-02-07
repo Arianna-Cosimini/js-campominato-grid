@@ -1,21 +1,146 @@
-.my-width{
-    width: 1100px;
+.my-width {
+    width: 1000px;
     margin: 0 auto;
 }
 
 
 
-.square{
+
+.square {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    width: calc(100% / 10);
     height: 100px;
-    border: 1px solid white;
+    border: 1px solid transparent; 
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s;
 }
 
-.active{
+.square:hover {
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.8); 
+}
+
+.medium {
+    width: calc(100% / 9);
+    height: 100px;
+}
+
+.easy {
+    width: calc(100% / 7);
+    height: 150px;
+}
+
+.active {
     background-color: darkmagenta;
+    border: 1px solid transparent;
+    box-shadow:inset 5px 5px 10px #240024;
     font-weight: bold;
     font-size: 20px;
+}
+
+
+@media screen and (min-width:0px) and (max-width:575px) {
+    .square {
+        width: calc(100% / 10);
+        height: 97.6px;
+    }
+
+    .medium {
+        width: calc(100% / 9);
+        height: 97.6px;
+
+    }
+
+    .easy {
+        width: calc(100% / 7);
+        height: 97.6px;
+
+    }
+
+}
+
+@media screen and (min-width:576px) and (max-width:767px) {
+    .square {
+        width: calc(100% / 10);
+        height: 51.6px;
+    }
+
+    .medium {
+        width: calc(100% / 9);
+        height: 51.6px;
+
+    }
+
+    .easy {
+        width: calc(100% / 7);
+        height: 73.71px;
+
+    }
+
+
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .square {
+        width: calc(100% / 10);
+        height: 69.6px;
+    }
+
+    .medium {
+        width: calc(100% / 9);
+        height: 69.6px;
+
+    }
+
+    .easy {
+        width: calc(100% / 7);
+        height: 99.43px;
+
+    }
+
+
+}
+
+@media screen and (min-width:992px) and (max-width:1999px) {
+    .square {
+        width: calc(100% / 10);
+        height: 93.6px;
+    }
+
+    .medium {
+        width: calc(100% / 9);
+        height: 93.6px;
+
+    }
+
+    .easy {
+        width: calc(100% / 7);
+        height: 133.71px;
+
+    }
+
+
+}
+
+@media screen and (min-width:1200px) {
+
+    .square {
+        width: calc(100% / 10);
+        height: 97.6px;
+    }
+
+    .medium {
+        width: calc(100% / 9);
+        height: 108.44px;
+
+    }
+
+    .easy {
+        width: calc(100% / 7);
+        height: 139.43px;
+
+    }
+
+    
 }
